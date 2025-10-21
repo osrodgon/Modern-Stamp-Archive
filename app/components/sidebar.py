@@ -143,7 +143,7 @@ def sidebar() -> rx.Component:
         ),
         class_name=rx.cond(
             CollectionState.show_sidebar,
-            "w-80 h-screen flex flex-col bg-white border-r border-neutral-200 fixed top-0 left-0 z-50 transform translate-x-0 transition-transform duration-300 ease-in-out md:static md:translate-x-0",
-            "w-80 h-screen flex flex-col bg-white border-r border-neutral-200 fixed top-0 left-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:static md:translate-x-0",
+            "w-80 h-screen flex flex-col bg-white border-r border-neutral-200 fixed top-0 left-0 z-50 transform translate-x-0 transition-transform duration-300 ease-in-out",
+            "w-80 h-screen flex flex-col bg-white border-r border-neutral-200 fixed top-0 left-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out",
         ),
     )
