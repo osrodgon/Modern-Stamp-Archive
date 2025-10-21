@@ -124,6 +124,7 @@ class CollectionState(rx.State):
     selected_issue_idx: int | None = 0
     selected_stamp_idx: int | None = None
     show_settings_menu: bool = False
+    show_sidebar: bool = True
 
     @rx.var
     def collection_sorted(self) -> list[YearCollection]:
@@ -190,3 +191,13 @@ class CollectionState(rx.State):
     @rx.event
     def toggle_settings_menu(self):
         self.show_settings_menu = not self.show_settings_menu
+
+    @rx.event
+    def toggle_sidebar(self):
+        self.show_sidebar = not self.show_sidebar
+
+    @rx.event
+    def close_sidebar_if_mobile(self):
+        if not self.show_sidebar:
+            return
+        self.show_sidebar = False
