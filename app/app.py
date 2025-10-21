@@ -16,10 +16,10 @@ def index() -> rx.Component:
             ),
             sidebar(),
             rx.el.div(
-                hamburger_menu(),
                 stamp_detail_view(),
                 class_name="flex-1 h-screen overflow-y-auto relative",
             ),
+            hamburger_menu(),
             class_name="flex w-full h-screen",
         ),
         class_name="font-['JetBrains_Mono'] bg-white",

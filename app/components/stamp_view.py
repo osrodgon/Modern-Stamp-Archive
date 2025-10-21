@@ -6,7 +6,7 @@ def hamburger_menu() -> rx.Component:
     return rx.el.button(
         rx.icon("menu", size=24),
         on_click=CollectionState.toggle_sidebar,
-        class_name="absolute top-4 left-4 z-30 p-2 rounded-md text-neutral-600 hover:bg-neutral-100",
+        class_name="fixed top-4 left-4 z-[51] p-2 rounded-md text-neutral-600 hover:bg-neutral-100 bg-white/50 backdrop-blur-sm",
     )
 
 
